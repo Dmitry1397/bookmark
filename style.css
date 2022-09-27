@@ -1,0 +1,887 @@
+html {
+    font-family: 'Rubik', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5em 20em;
+}
+
+.under {
+    content: url(images/logo-bookmark.svg);
+}
+
+.over {
+    content: url(images/logo-bookmark-over.svg);
+}
+
+#mobile-menu {
+    display: none;
+    position: relative;
+    z-index: 101;
+}
+
+nav .social-media {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    padding: 0;
+
+    list-style: none;
+    font-weight: 400;
+}
+
+.menu-item {
+    margin: 0;
+}
+
+.menu-link {
+    padding: 10px 40px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    color: hsl(229, 31%, 21%);
+}
+
+.menu-link:hover {
+    color: hsl(0, 94%, 66%);
+}
+
+#login,
+#contact-us {
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    background: hsl(0, 94%, 66%);
+    border: 3px solid transparent;
+    border-radius: 10px;
+}
+
+#login:hover,
+#contact-us:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+    background: hsl(0, 0%, 100%);
+    border: 3px solid hsl(0, 94%, 66%)
+}
+
+.header-block {
+    display: flex;
+    gap: 50px;
+}
+
+.header-block #left,
+.header-block #right {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.header-block #left {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5em;
+    padding-left: 20em;
+}
+
+.header-block h1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 50px;
+
+    color: hsl(229, 31%, 21%);
+}
+
+.header-block p {
+    margin: 30px 0;
+}
+
+.header-block .get {
+    display: flex;
+    gap: 15px;
+}
+
+.go-to {
+    padding: 10px 20px;
+    
+    text-decoration: none;
+    font-size: 14px;
+    color: hsl(0, 0%, 100%);
+
+    background: hsl(231, 69%, 60%);
+    border: 3px solid transparent;
+    border-radius: 7px;
+}
+
+.go-to:hover {
+    color: hsl(231, 69%, 60%);
+    background: hsl(0, 0%, 100%);
+    border-color: hsl(231, 69%, 60%);
+}
+
+.get #on-firefox {
+    color: hsl(229, 31%, 21%);
+    background: hsl(0, 0%, 97%);
+    box-shadow: hsla(0, 0%, 0%, 0.1) 0px 10px 15px -3px, hsla(0, 0%, 0%, 0.05) 0px 4px 6px -2px;
+}
+
+.get #on-firefox:hover {
+    border: 3px solid hsl(229, 31%, 21%);
+}
+
+.header-block #right {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.header-block img {
+    max-width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.header-block #background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 60%;
+    width: 70%;
+
+    background: hsl(231, 69%, 60%);
+    border-radius: 200px 0 0 200px;
+}
+
+.features,
+.downloads {
+    margin-top: 100px;
+}
+
+.features h2,
+.downloads h2,
+.FAQs h2 {
+    text-align: center;
+    font-size: 30px;
+    color: hsl(229, 31%, 21%);
+}
+
+.features p,
+.downloads p,
+.FAQs p {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.switcher {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: fit-content;
+    border-bottom: 1px solid hsl(229, 8%, 60%);
+}
+
+.switcher-button {
+    position: relative;
+    margin-bottom: -1px;
+    padding: 20px 50px;
+    background: none;
+
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid transparent;
+}
+
+.switcher-button:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+}
+
+#border {
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    width: 100px;
+    border-bottom: 3px solid hsl(0, 94%, 66%);
+}
+
+.active-tab #border {
+    display: block;
+}
+
+.features-tab {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#ft2 {
+    display: none;
+}
+
+#ft3 {
+    display: none;
+}
+
+.features-tab h2,
+.features-tab p {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+}
+
+.features-tab #left,
+.features-tab #right {
+    width: 50%;
+}
+
+.features-tab #left {
+    position: relative;
+    padding-left: 20em;
+}
+
+.features-tab img {
+    position: relative;
+    height: 350px;
+    width: 400px;
+    max-width: 100%;
+    object-fit: contain;
+    z-index: 10;
+}
+
+.features-tab #background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 60%;
+    width: 70%;
+
+    background: hsl(231, 69%, 60%);
+    border-radius: 0 200px 200px 0;
+}
+
+.text {
+    padding-right: 20em;
+}
+
+.text h2 {
+    margin-top: 50px;
+}
+
+.text p {
+    margin: 30px 0;
+}
+
+.download-options {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 100px;
+    padding: 0 20em;
+}
+
+.download-options div {
+    width: 250px;
+    height: fit-content;
+    box-shadow: hsla(0, 0%, 0%, 0.1) 0px 10px 15px -3px, hsla(0, 0%, 0%, 0.05) 0px 4px 6px -2px;
+}
+
+#firefox {
+    margin-top: 50px;
+}
+
+#opera {
+    margin-top: 100px;
+}
+
+.download-options img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.download-options h3 {
+    font-size: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    color: hsl(229, 31%, 21%);
+}
+
+.download-options p {
+    width: 100%;
+    margin: 10px 0;
+    padding-bottom: 30px;
+    background: url(images/bg-dots.svg) no-repeat bottom;
+}
+
+.download-options a {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+}
+
+.FAQs {
+    margin-top: 100px;
+}
+
+.questions {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.questions p {
+    width: 100%;
+    text-align: unset;
+}
+
+.question {
+    border-bottom: 1px solid hsl(229, 31%, 21%);
+}
+
+.question:first-child {
+    border-top: 1px solid hsl(229, 31%, 21%);
+}
+
+#question {
+    padding: 20px 0;
+    font-weight: 500;
+    color: hsl(229, 31%, 21%);
+}
+
+.open {
+    background: url(images/icon-arrow.svg) no-repeat center right 20px / 15px;
+}
+
+.close {
+    background: url(images/icon-arrow-close.svg) no-repeat center right 20px / 15px;
+}
+
+#question:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+}
+
+#answer {
+    display: none;
+    padding-bottom: 20px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.FAQs a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    margin-top: 100px;
+    padding: 50px 0;
+    background: hsl(231, 69%, 60%);
+}
+
+.members {
+    margin:0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: hsl(0, 0%, 100%);
+}
+
+.subscription h3 {
+    width: 500px;
+    margin: 50px 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 35px;
+    color: hsl(0, 0%, 100%)
+}
+
+form {
+    display: flex;
+    gap: 20px;
+}
+
+#email,
+#contact-us {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 50px;
+    font-size: 16px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+}
+
+#email {
+    padding: 10px 20px;
+    width: 300px;
+    outline: none;
+    border: 3px solid transparent
+}
+
+#email:invalid,
+#label .error {
+    background: hsl(0, 0%, 100%) url(images/icon-error.svg) no-repeat center right 10px / 16px;
+    border: 3px solid hsl(0, 94%, 66%);
+}
+
+#label {
+    position: relative;
+    height: 80px;
+    background: hsl(0, 94%, 66%);
+    background: transparent;
+    border-radius: 10px;
+}
+
+#label span {
+    box-sizing: border-box;
+    display: none;
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-style: italic;
+    color: hsl(0, 0%, 100%);
+}
+
+#contact-us {
+    padding: 0px 40px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    padding: 50px 20em;
+    background: hsl(229, 31%, 21%);
+}
+
+.site-map {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-map ul {
+    display: flex;
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.site-map a {
+    margin: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 100%);
+}
+
+.site-map a:hover {
+    color: hsl(0, 94%, 66%);
+}
+
+.social-media a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+#facebook {
+    background: url(images/icon-facebook.svg) no-repeat center / contain;
+}
+
+#facebook:hover {
+    background: url(images/icon-facebook-hover.svg) no-repeat center / contain;
+}
+
+#twitter {
+    background: url(images/icon-twitter.svg) no-repeat center / contain;
+}
+
+#twitter:hover {
+    background: url(images/icon-twitter-hover.svg) no-repeat center / contain;
+}
+
+a, p {
+    font-size: 18px;
+}
+
+p {
+    color: hsl(229, 8%, 60%);
+}
+
+@media screen and (max-width: 800px) {
+
+    header {
+        padding: 50px 30px;
+    }
+
+    .logo {
+        position: relative;
+        z-index: 101;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: hsl(229, 31%, 21%, 0.9);
+        z-index: 100;
+    }
+
+    
+    nav .social-media {
+        display: flex;
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        gap: 30px;
+    }
+    
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0 20px;
+        padding-top: 100px;
+    }
+
+    .menu-item {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .menu-item:first-child {
+        border-top: 1px solid hsl(0, 0%, 100%);
+    }
+
+    .menu-link {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        padding-bottom: 20px;
+        color: hsl(0, 0%, 100%);
+        text-align: center;
+        border-bottom: 1px solid hsl(0, 0%, 100%);
+    }
+
+    #login {
+        padding: 10px 0;
+        background: transparent;
+        border-color: hsl(0, 0%, 100%);
+    }
+
+    #mobile-menu {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: none;
+    }
+
+    .show {
+        background: url(images/icon-hamburger.svg) no-repeat center / contain;
+    }
+
+    .hide {
+        background: url(images/icon-close.svg) no-repeat center / contain;
+    }
+
+    .header-block {
+        flex-direction: column;
+    }
+
+    .header-block #left,
+    .header-block #right {
+        width: 100%;
+    }
+
+    .header-block #right {
+        order: 1;
+        padding-bottom: 0;
+    }
+
+    .header-block #left {
+        order: 2;
+        padding: 30px;
+    }
+
+    .header-block h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .header-block p {
+        text-align: center;
+    }
+
+    .header-block .get {
+        width: 100%;
+        gap: unset;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .go-to {
+        padding: 15px;
+    }
+
+    .features,
+    .downloads,
+    .FAQs,
+    .subscription {
+        margin-top: 50px;
+    }
+
+    .features p,
+    .downloads p,
+    .FAQs p {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .features h2,
+    .downloads h2,
+    .FAQs h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .switcher {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        margin-top: 50px;
+        padding: 0 30px;
+        border: none;
+    }
+
+    .switcher-button {
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .switcher-button:first-child {
+        border-top: 1px solid hsl(229, 8%, 60%);
+    }
+
+    .switcher-button {
+        border-bottom: 1px solid hsl(229, 8%, 60%);
+    }
+
+    .features-tab {
+        flex-direction: column;
+    }
+
+    .features-tab #left,
+    .features-tab #right {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .features-tab #left {
+        padding: 0 30px;
+    }
+
+    .features-tab img {
+        height: 300px;
+    }
+
+    .text {
+        padding: 30px;
+    }
+
+    .text p {
+        padding: 0;
+    }
+
+    .features-tab a {
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+    }
+
+    .download-options {
+        flex-direction: column;
+        margin-top: 0;
+        padding: 30px;
+    }
+
+    .download-options div {
+        width: 100%;
+    }
+
+    .download-options p {
+        padding-bottom: 30px;
+    }
+
+    #chrome,
+    #firefox,
+    #opera {
+        margin-top: 0px;
+    }
+
+    .questions {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    #question {
+        text-align: left;
+    }
+
+    #answer {
+        padding: 0;
+        padding-bottom: 20px;
+    }
+
+    .open {
+        background: url(images/icon-arrow.svg) no-repeat center right / 15px;
+    }
+    
+    .close {
+        background: url(images/icon-arrow-close.svg) no-repeat center right / 15px;
+    }
+
+    .subscription {
+        padding: 50px 30px;
+    }
+
+    .subscription h3 {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #email,
+    #contact-us {
+        font-size: 15px;
+        height: 40px;
+    }
+
+    #label {
+        height: fit-content;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 50px 30px;
+    }
+
+    .site-map {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-map ul {
+        flex-direction: column;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .site-map li {
+        margin: 10px 0;
+    }
+
+    a, p {
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (min-width: 801px) and (max-width: 1100px) {
+    
+    header {
+        padding: 5em;
+    }    
+
+    .menu-link {
+        padding: 10px 20px;
+    }
+
+    #login {
+        padding: 10px 20px;
+    }
+
+    .header-block {
+        align-items: center;
+    }
+
+    .header-block #left {
+        padding-top: 0;
+        padding-left: 5em;
+    }
+
+    .header-block #right {
+        padding-bottom: 0;
+    }
+
+    .header-block img {
+        padding-top: 50px;
+    }
+
+    .features-tab {
+        gap: 50px;
+    }
+
+    .text {
+        padding-right: 5em;
+    }
+
+    .features-tab #left {
+        padding-left: 5em;
+    }
+
+    .download-options {
+        margin-top: 0;
+        padding: 0 5em;
+    }
+
+    footer {
+        padding: 50px
+    }
+
+    .site-map a {
+        margin: 0 10px;
+    }
+
+    .features p,
+    .downloads p,
+    .FAQs p {
+        width: 50%;
+    }
+
+    .question p {
+        width: 100%;
+    }
+}
